@@ -1,9 +1,11 @@
-# MathJax-grunt-cleaner
+# scipy-mathjax
 
-A grunt file to reduce the footprint of a MathJax installation
+Scipy-variant of stripped-down Mathjax.
 
-* Fetch a copy of MathJax `wget https://github.com/mathjax/MathJax/archive/master.zip && unzip master.zip`
-* copy & rename the `template` task
-* comment out the components you want to keep (perhaps **counterintuitive**)
+Only keep TeX-AMS input with SVG + stix-web output.
 
-See the comments in file for more details and caveats.
+Run rebuild.sh to rebuild the files.
+
+Note that this requires node.js npm being available.
+
+Based on https://github.com/mathjax/MathJax-grunt-cleaner.git

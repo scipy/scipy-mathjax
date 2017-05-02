@@ -364,6 +364,47 @@ module.exports = function(grunt) {
     "clean:images",
     "clean:notcode"
   ]);
+  grunt.registerTask("TeX_SVG", [
+    //      Early choices.
+    //        "clean:unpacked",
+    "clean:packed", // pick one -- packed for production, unpacked for development.
+    "clean:allConfigs", // if you do not need any combined configuration files.
+    //      Fonts. Pick at least one! Check notes above on configurations.
+    "clean:fontAsana",
+    "clean:fontGyrePagella",
+    "clean:fontGyreTermes",
+    "clean:fontLatinModern",
+    "clean:fontNeoEuler",
+    "clean:fontStix",
+    "clean:fontStixWeb",
+    //        "clean:fontTeX",
+    //      Font formats. Pick at least one (unless you use SVG output; then clean all).
+    "clean:dropFonts", // when using SVG output
+    "clean:eot",
+    "clean:otf",
+    "clean:png",
+    "clean:svg",
+    "clean:woff",
+    //      Input. Pick at least one.
+    "clean:asciimathInput",
+    "clean:mathmlInput",
+    //        "clean:texInput",
+    //       Output
+    "clean:htmlCssOutput",
+    "clean:mathmlOutput",
+    //        "clean:svgOutput",
+    // Extensions. You probably want to leave the set matching your choices.
+    "clean:extensionsAsciimath",
+    "clean:extensionsMathml",
+    //        "clean:extensionsTeX",
+    "clean:extensionHtmlCss",
+    // Other items
+    "clean:locales",
+    "clean:miscConfig",
+    //        "clean:miscExtensions",
+    "clean:images",
+    "clean:notcode"
+  ]);
   grunt.registerTask("MML_SVG_TeX", [
     //      Early choices.
     "clean:unpacked",
