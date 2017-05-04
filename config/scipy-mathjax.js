@@ -17,7 +17,8 @@ MathJax.Hub.Config({
   extensions: ["tex2jax.js","toMathML.js","TeX/noErrors.js","TeX/noUndefined.js","TeX/AMSmath.js","TeX/AMSsymbols.js","fast-preview.js","AssistiveMML.js","[a11y]/accessibility-menu.js"],
   jax: ["input/TeX","output/SVG","output/PreviewHTML"],
   showProcessingMessages: false,
-  showMathMenu: false
+  showMathMenu: false,
+  messageStyle: "none"
 });
 
 MathJax.Ajax.loadComplete("[MathJax]/config/scipy-mathjax.js");
