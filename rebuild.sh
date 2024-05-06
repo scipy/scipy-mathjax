@@ -1,11 +1,11 @@
 #!/bin/sh
 set -e -u -x
 
-DOWNLOAD_NAME=2.7.1.tar.gz
+DOWNLOAD_NAME=3.0.0.tar.gz
 DOWNLOAD_FILE="build/download/$DOWNLOAD_NAME"
 DOWNLOAD_URL=https://github.com/mathjax/MathJax/archive/$DOWNLOAD_NAME
-DOWNLOAD_HASH="2bb4c0c6f326dd1964ecad1d302d2f9f4a3eb4364f89a30d5e3b4b3069597169"
-PACKAGE_DIR=MathJax-2.7.1
+DOWNLOAD_HASH="6ead7d3367c1c3e1916a1c015d227d7a7c4a456c12841f4dec2ea1e5b22333a1"
+PACKAGE_DIR=MathJax-3.0.0
 
 download() {
     install -d build/download
@@ -57,8 +57,8 @@ git_commit() {
 download
 npm_install
 unpack_patch
-replace
-git_commit
+# replace
+# git_commit
 
 echo "Rebuild successful!"
 
